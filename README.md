@@ -14,7 +14,7 @@ realizar la actividad en condiciones de calidad del aire diferentes.
 Este problema lo conozco por mi experiencia realizando actividades
 deportivas al aire libre, como salir a caminar o a correr.
 
-## Datos ambientales.
+## Datos ambientales
 
 Para resolver el problema se utilizarán datos reales de calidad del aire
 publicados por la Junta de Andalucía, en su propia página web.
@@ -35,9 +35,9 @@ Entre los contaminantes disponibles se encuentran:
 Se analizarán las mediciones horarias de calidad del aire de las
 estaciones seleccionadas de Granada.
 
-El objetivo será comparar las diferentes franjas horarias y determinar
-cuáles presentan mejores condiciones de calidad del aire según los
-valores registrados de los contaminantes.
+El objetivo será comparar las diferentes franjas horarias utilizando los valores registrados 
+de los contaminantes y establecer cuáles presentan mejores condiciones de calidad del aire para 
+realizar actividad deportiva.
 
 ## Documentación
 
