@@ -47,6 +47,10 @@ configuración [configuracion del repositorio](docs/configuracion.md)
 
 ![Tarjeta del juego de rol con mi problema](tarjetaRol.jpeg)
 
+## Tarjeta Validacion
+
+![Tarjeta de Validación](tarjetaValidacion.jpeg)
+
 ## Configuración
 
 La configuración inicial del proyecto se realizará mediante las herramientas y servicios necesarios para su desarrollo y posterior despliegue en la nube.
