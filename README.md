@@ -1,18 +1,43 @@
-# ReservasDeportivas
+# Calidad Aire Deporte
 
 ## Problema
 
-El director de una ciudad deportiva, la cual dispone de 1 campo de futbol 11, dos de futbol 7, una piscina, un pabellon, 2 pistas de tennis, y 4 de pádel, tiene un problema, y es que le cuesta evitar que las reservas de sus instalaciones deportivas sean incompatibles, por ejemplo, una vez tuvo el problema de que coincidieron dos equipos de futbol para entrenar en el campo de futbol 11, y uno acabó poniendo una hoja de reclamaciones.
-Este problema lo conozco, porque he jugado en un equipo de balonmano, y hemos tenido que hacer reservas para el pabellón y varias veces para entrenamientos especiales otras instalaciones como la piscina
+Practico deporte al aire libre en granada, y necesito saber
+qué franjas horarias presentan mejores condiciones de calidad del aire
+para realizar la actividad.
 
-## Datos de las reservas de las instalaciones
+La calidad del aire puede variar a lo largo del día y las distintas
+estaciones de medición registran diferentes concentraciones de
+contaminantes. Por ello, elegir una franja horaria u otra puede suponer
+realizar la actividad en condiciones de calidad del aire diferentes.
 
-Se puede reservar una o varias instalaciones un tiempo mínimo de una hora, por lo que se necesita, la instalación a reservar, el dia, la hora de inicio, y la hora de final.
-Estos datos están disponibles en el registro de la ciudad deportiva
+Este problema lo conozco por mi experiencia realizando actividades
+deportivas al aire libre, como salir a caminar o a correr.
+
+## Datos ambientales.
+
+Para resolver el problema se utilizarán datos reales de calidad del aire
+publicados por la Junta de Andalucía, en su propia página web.
+
+Los datos se proporcionan en ficheros CSV y contienen mediciones de
+calidad del aire realizadas por las estaciones de vigilancia.
+
+Entre los contaminantes disponibles se encuentran:
+
+- PM10
+- PM2.5
+- O₃
+- NO₂
+- SO₂
 
 ## Qué se necesita analizar
 
-El director debe evitar que se solapen los horarios de reservas entre diferentes clientes, tambien se debe analizar la ocupación de las instalaciones, y saber que horarios tienen mas demanda
+Se analizarán las mediciones horarias de calidad del aire de las
+estaciones seleccionadas de Granada.
+
+El objetivo será comparar las diferentes franjas horarias y determinar
+cuáles presentan mejores condiciones de calidad del aire según los
+valores registrados de los contaminantes.
 
 ## Documentación
 
