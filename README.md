@@ -17,18 +17,39 @@ deportivas al aire libre, como salir a caminar o a correr.
 ## Datos ambientales
 
 Para resolver el problema se utilizarán datos reales de calidad del aire
-publicados por la Junta de Andalucía, en su propia página web.
+publicados por la Junta de Andalucía:
 
-Los datos se proporcionan en ficheros CSV y contienen mediciones de
-calidad del aire realizadas por las estaciones de vigilancia.
+[Datos históricos de calidad del aire](https://www.juntadeandalucia.es/medioambiente/atmosfera/informes_siva/historico_cuantitativo/)
 
-Entre los contaminantes disponibles se encuentran:
+Los datos se distribuyen en ficheros CSV organizados por año y por
+contaminante. Existen ficheros de mediciones horarias con el formato:
 
-- PM10
-- PM2.5
-- O₃
-- NO₂
-- SO₂
+`PA_HH_AAAA.csv`
+
+donde `PA` identifica el contaminante y `AAAA` el año de las mediciones.
+
+Los ficheros horarios contienen las siguientes columnas:
+
+- `PROVINCIA`: código de la provincia.
+- `MUNICIPIO`: código del municipio.
+- `ESTACION`: código de la estación de vigilancia.
+- `PARAMETRO`: código del contaminante medido.
+- `TECNICA`: código de la técnica de medición.
+- `AÑO`: año de la medición.
+- `MES`: mes de la medición.
+- `DIA`: día de la medición.
+- `H01`: `H24`: valores registrados durante las 24 horas del día.
+
+Por ejemplo, el fichero `C6H6_HH_2020.csv` contiene mediciones horarias
+reales y registros correspondientes a la provincia de Granada.
+
+Los códigos de provincia, municipio y estación se interpretan mediante
+el fichero `Listado_estaciones.xlsx`, mientras que los códigos de los
+parámetros y de las técnicas de medición se interpretan mediante los
+ficheros `Listado_parametros.xlsx` y `Listado_tecnicas_de_medida.xlsx`.
+
+Para el problema se utilizarán las mediciones horarias de los
+contaminantes disponibles en las estaciones seleccionadas de Granada.
 
 ## Qué se necesita analizar
 
