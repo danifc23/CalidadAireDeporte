@@ -2,79 +2,61 @@
 
 ## Problema
 
-Practico deporte al aire libre en granada, y necesito saber
-qué franjas horarias presentan mejores condiciones de calidad del aire
-para realizar la actividad.
+Practico deporte al aire libre en Granada, sobre todo salir a correr.
+Cuando corro, respiro más cantidad de aire y me preocupa que el aire
+que estoy respirando no sea de buenas condiciones. 
+Además, he notado que cuando las condiciones del aire son peores, mi rendimiento durante la
+actividad también es peor.
+Normalmente puedo salir
+por la mañana, por la tarde o por la noche, dependiendo del horario que tenga ese día.
 
-La calidad del aire puede variar a lo largo del día y las distintas
-estaciones de medición registran diferentes concentraciones de
-contaminantes. Por ello, elegir una franja horaria u otra puede suponer
-realizar la actividad en condiciones de calidad del aire diferentes.
+El problema es que, cuando tengo que decidir cuándo salir a correr, no
+sé qué condiciones de calidad del aire hay en las diferentes franjas
+horarias. Actualmente no tengo esa información para poder tenerla en
+cuenta al elegir cuándo realizar la actividad.
 
-Este problema lo conozco por mi experiencia realizando actividades
-deportivas al aire libre, como salir a caminar o a correr.
 
 ## Datos ambientales
 
-Para resolver el problema se utilizarán datos reales de calidad del aire
-publicados por la Junta de Andalucía:
+Para abordar el problema se utilizarán datos reales de calidad del aire
+publicados por la Junta de Andalucía.
 
-[Datos históricos de calidad del aire](https://www.juntadeandalucia.es/medioambiente/atmosfera/informes_siva/historico_cuantitativo/)
+[fuente de datos de la Junta](https://www.juntadeandalucia.es/medioambiente/atmosfera/informes_siva/cuantitativo/2026/)
 
-Los datos se distribuyen en ficheros CSV organizados por año y por
-contaminante. Existen ficheros de mediciones horarias con el formato: `PA_HH_AAAA.csv`
-donde `PA` identifica el contaminante y `AAAA` el año de las mediciones.
+Estos datos se van actualizando por cada día que pasa.
+La fuente proporciona un fichero de datos para cada día. Los ficheros siguen el formato GR_AAAAMMDD.csv, donde GR identifica Granada y AAAAMMDD indica la fecha de las mediciones.
 
-Los ficheros horarios contienen las siguientes columnas:
-- `PROVINCIA`: código de la provincia.
-- `MUNICIPIO`: código del municipio.
-- `ESTACION`: código de la estación de vigilancia.
-- `PARAMETRO`: código del contaminante medido.
-- `TECNICA`: código de la técnica de medición.
-- `AÑO`: año de la medición.
-- `MES`: mes de la medición.
-- `DIA`: día de la medición.
-- `H01`hasta `H24`: valores registrados durante las 24 horas del día.
+Los datos utilizados contienen mediciones horarias de calidad del aire
+y permiten relacionar las concentraciones de los contaminantes con una
+hora concreta.
 
-Por ejemplo, el fichero `PM10_HH_2024.csv` contiene mediciones horarias
-reales y registros correspondientes a la provincia de Granada.
+Para el estudio se utilizarán los datos correspondientes a la estación
+GRANADA - NORTE.
 
-Los códigos de provincia, municipio y estación se interpretan mediante
-el fichero `Listado_estaciones.xlsx`, mientras que los códigos de los
-parámetros y de las técnicas de medición se interpretan mediante los
-ficheros `Listado_parametros.xlsx` y `Listado_tecnicas_de_medida.xlsx`.
+Los datos disponibles incluyen mediciones de PM10, PM2.5, NO2, O3 y SO2.
+Para este problema se tendrán en cuenta PM10, PM2.5, NO2 y SO2.
 
-Para el problema se utilizarán las mediciones horarias de la estación
-GRANADA - NORTE correspondientes al año 2024, que son los mas recientes que he visto en la página de la Junta.
-
-En el fichero `PM10_HH_2024.csv` aparecen registros de la provincia
-de Granada (`PROVINCIA = 18`). Los códigos que me interesan son
-`PROVINCIA = 18`, `MUNICIPIO = 87` y `ESTACION = 7`, que corresponden a la
-estación `GRANADA - NORTE`, según el fichero `Listado_estaciones.xlsx`.
-
-Los parámetros y sus unidades se pueden identificar mediante el fichero
-`Listado_parametros.xlsx` proporcionado también por la Junta de Andalucía.
+Los datos contienen información de fecha y hora junto con las
+mediciones de los contaminantes, lo que permite analizar las condiciones
+del aire en diferentes franjas horarias.
 
 ## Qué se necesita analizar
 
-Se analizarán las mediciones horarias correspondientes al año 2024 de
-la estación GRANADA - NORTE.
+La logica a seguir es comparar las diferentes franjas horarias teniendo en cuenta
+conjuntamente los contaminantes disponibles.
 
-Para el estudio se utilizarán los siguientes contaminantes:
-- SO₂ (dióxido de azufre)
-- NO₂ (dióxido de nitrógeno)
-- PM10 (partículas en suspensión de diámetro inferior a 10 µm)
-- PM2.5 (partículas en suspensión de diámetro inferior a 2,5 µm)
+Los cuatro contaminantes tendrán la misma importancia. Una concentración
+baja será favorable y una concentración especialmente alta penalizará
+la valoración de esa franja.
 
-Los datos se obtendrán de los ficheros horarios `PM10_HH_2024.csv`,
-`PM25_HH_2024.csv`, `NO2_HH_2024.csv` y `SO2_HH_2024.csv`.
+Cuando no exista un dato para un contaminante en una determinada hora,
+ese contaminante no se tendrá en cuenta en la valoración de esa hora.
 
-Estos ficheros contienen registros de la estación GRANADA - NORTE
-(códigos `PROVINCIA = 18`, `MUNICIPIO = 87`, `ESTACION = 7`).
+La valoración de una franja se obtendrá a partir de los contaminantes
+que tengan datos disponibles, de forma que se puedan comparar las
+diferentes horas del día.
 
-La extracción y el procesamiento de los datos se realizarán mediante
-código, leyendo directamente los ficheros CSV y seleccionando las
-mediciones correspondientes a la estación y los parámetros utilizados.
+La franja con una valoración más favorable será la considerada como mejor para realizar la actividad.
 
 ## Documentación
 
