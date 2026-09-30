@@ -22,14 +22,10 @@ publicados por la Junta de Andalucía:
 [Datos históricos de calidad del aire](https://www.juntadeandalucia.es/medioambiente/atmosfera/informes_siva/historico_cuantitativo/)
 
 Los datos se distribuyen en ficheros CSV organizados por año y por
-contaminante. Existen ficheros de mediciones horarias con el formato:
-
-`PA_HH_AAAA.csv`
-
+contaminante. Existen ficheros de mediciones horarias con el formato: `PA_HH_AAAA.csv`
 donde `PA` identifica el contaminante y `AAAA` el año de las mediciones.
 
 Los ficheros horarios contienen las siguientes columnas:
-
 - `PROVINCIA`: código de la provincia.
 - `MUNICIPIO`: código del municipio.
 - `ESTACION`: código de la estación de vigilancia.
@@ -52,12 +48,12 @@ Para el problema se utilizarán las mediciones horarias de la estación
 GRANADA - NORTE correspondientes al año 2024, que son los mas recientes que he visto en la página de la Junta.
 
 En el fichero `PM10_HH_2024.csv` aparecen registros de la provincia
-de Granada (`PROVINCIA = 18`). En particular, los códigos
-`PROVINCIA = 18`, `MUNICIPIO = 87` y `ESTACION = 7` corresponden a la
+de Granada (`PROVINCIA = 18`). Los códigos que me interesan son
+`PROVINCIA = 18`, `MUNICIPIO = 87` y `ESTACION = 7`, que corresponden a la
 estación `GRANADA - NORTE`, según el fichero `Listado_estaciones.xlsx`.
 
 Los parámetros y sus unidades se pueden identificar mediante el fichero
-`Listado_parametros.xlsx` proporcionado por la Junta de Andalucía.
+`Listado_parametros.xlsx` proporcionado también por la Junta de Andalucía.
 
 ## Qué se necesita analizar
 
@@ -75,11 +71,6 @@ Los datos se obtendrán de los ficheros horarios `PM10_HH_2024.csv`,
 
 Estos ficheros contienen registros de la estación GRANADA - NORTE
 (códigos `PROVINCIA = 18`, `MUNICIPIO = 87`, `ESTACION = 7`).
-
-El objetivo será comparar las diferentes franjas horarias utilizando
-los valores registrados de estos contaminantes y establecer cuáles
-presentan mejores condiciones de calidad del aire para realizar
-actividad deportiva.
 
 La extracción y el procesamiento de los datos se realizarán mediante
 código, leyendo directamente los ficheros CSV y seleccionando las
