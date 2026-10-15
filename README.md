@@ -73,3 +73,13 @@ configuración [configuracion del repositorio](docs/configuracion.md)
 ## Configuración
 
 La configuración inicial del proyecto se realizará mediante las herramientas y servicios necesarios para su desarrollo y posterior despliegue en la nube.
+
+## Planificación
+
+[User Journey](docs/UserJourney.md)
+
+[Planificación](docs/planificacion.md)
+
+[HU001 - Consultar calidad del aire](https://github.com/danifc23/CalidadAireDeporte/issues/2)
+
+[HU002 - Comparar franjas horarias](https://github.com/danifc23/CalidadAireDeporte/issues/3)
