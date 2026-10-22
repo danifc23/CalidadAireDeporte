@@ -4,42 +4,75 @@
 El User Journey se encuentra en [UserJourney.md](UserJourney.md).
 
 ## Persona
-José, 35 años.
+### Daniel
+Estudiante universitario de Granada que sale a correr varias veces
+por semana. Sus horarios dependen de las clases y necesita conocer
+las condiciones previstas del aire para una hora concreta.
 
-Sale a andar habitualmente y tiene los pulmones delicados, por lo que
-quiere evitar salir cuando haya una cantidad elevada de contaminantes
-en el aire.
+### José
+Tiene 35 años y sale a caminar habitualmente. Es sensible a la
+contaminación y dispone de varias horas libres para realizar su
+actividad. Necesita identificar qué hora presenta mejores condiciones
+previstas sin tener que analizar manualmente cada contaminante.
 
-Necesita consultar las condiciones del aire en diferentes franjas
-horarias para poder decidir cuándo realizar su actividad.
 ## Historias de usuario
 ### HU001 - Consultar calidad del aire
 
-Como persona que sale a andar y tiene los pulmones delicados,
-quiero consultar la calidad del aire en las diferentes franjas horarias,
-para poder elegir cuándo salir a andar respirando la menor cantidad
-posible de contaminantes.
+Como estudiante que tiene una hora determinada para salir a correr,
+quiero obtener una predicción de la calidad del aire para esa hora,
+para saber si las condiciones serán favorables o desfavorables
+y decidir si mantengo o aplazo mi actividad.
 [HU001 en GitHub](https://github.com/danifc23/CalidadAireDeporte/issues/2)
 
 ### HU002 - Comparar franjas horarias
 
-Como persona que sale a andar y tiene los pulmones delicados,
-quiero comparar las condiciones del aire de las diferentes franjas horarias,
-para escoger cuándo realizar la actividad con la menor cantidad posible de contaminantes.
+Como persona sensible a la contaminación que dispone de varias
+horas para salir a caminar, quiero que se determine automáticamente
+qué franja tendrá las condiciones más favorables, considerando
+conjuntamente las predicciones de los distintos contaminantes,
+para reducir mi exposición sin tener que interpretar y comparar
+manualmente todos los valores.
 [HU002 en GitHub](https://github.com/danifc23/CalidadAireDeporte/issues/3)
 
-## Milestones
+# Milestones
 
-### Milestone 0
+## Milestone 0 - Modelado del dominio de calidad del aire
 
-Primera versión que permita consultar las mediciones de calidad del aire
-necesarias para el proyecto.
+Desarrollar un módulo de código que permita representar 
+los datos necesarios para predecir la calidad del aire en Granada.
 
-HU asociada: HU001.
+### Producto mínimamente viable:
 
-### Milestone 1
+Un módulo que modele las siguientes entidades:
 
-Primera versión que permita comparar las condiciones de calidad del aire
-de las diferentes franjas horarias y obtener cuál es la más favorable.
+- Medición: contaminante, concentración, estación y fecha/hora.
+- Predicción: concentraciones estimadas de los contaminantes para una hora futura.
+- Franja horaria: intervalo de tiempo en el que se puede realizar una actividad deportiva.
 
-HU asociada: HU002.
+### Criterio de validación:
+
+El módulo deberá permitir representar correctamente estas entidades, 
+incluyendo situaciones en las que falten mediciones. Se comprobará mediante pruebas automatizadas.
+
+Historias de usuario asociadas: HU001 y HU002.
+
+## Milestone 1 - Predicción de la calidad del aire
+
+Desarrollar una biblioteca que permita predecir la calidad del aire en Granada y 
+determinar qué franjas horarias serán más favorables para practicar deporte al aire libre.
+
+### Producto mínimamente viable:
+
+Una biblioteca que, utilizando las entidades del Milestone 0, permita:
+
+- Predecir la calidad del aire: estimar las concentraciones de contaminantes para una hora futura a partir de mediciones anteriores.
+- Evaluar las condiciones: determinar si la calidad del aire prevista es favorable o desfavorable para practicar deporte.
+- Seleccionar la mejor franja horaria: comparar las predicciones de diferentes horas e identificar aquella que presente mejores condiciones.
+
+### Criterio de validación:
+
+La biblioteca deberá generar predicciones y seleccionar las franjas horarias más favorables. 
+Su funcionamiento se comprobará mediante pruebas automatizadas, contrastando las predicciones con mediciones históricas 
+y verificando que la selección de horarios sigue los criterios establecidos.
+
+Historias de usuario asociadas: HU001 y HU002.
