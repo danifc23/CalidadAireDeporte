@@ -80,6 +80,6 @@ La configuración inicial del proyecto se realizará mediante las herramientas y
 
 [Planificación](docs/planificacion.md)
 
-[HU001 - Consultar calidad del aire](https://github.com/danifc23/CalidadAireDeporte/issues/2)
+[HU001 - Incertidumbre sobre la contaminación al practicar deporte](https://github.com/danifc23/CalidadAireDeporte/issues/2)
 
-[HU002 - Comparar franjas horarias](https://github.com/danifc23/CalidadAireDeporte/issues/3)
+[HU002 - Dificultad para elegir un horario con menor contaminación](https://github.com/danifc23/CalidadAireDeporte/issues/3)
