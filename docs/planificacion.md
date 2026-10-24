@@ -27,7 +27,7 @@ ya que podría exponerme a niveles elevados de contaminación atmosférica que a
 las condiciones en las que realizo mi actividad.
 [HU001 en GitHub](https://github.com/danifc23/CalidadAireDeporte/issues/2)
 
-### HU002 - Comparar franjas horarias
+### HU002 - Dificultad para elegir un horario con menor contaminación
 
 Como persona sensible a la contaminación atmosférica que practica deporte al aire libre en Granada 
 y dispone de flexibilidad horaria, desconozco qué momentos del día presentan condiciones 
@@ -46,8 +46,9 @@ con niveles elevados de contaminación existiendo otras alternativas más favora
 Una primera versión de una biblioteca de código organizada en un paquete 
 que pueda ser utilizado por otros módulos del proyecto.
 
-El contenido del paquete se determinará mediante el análisis del problema planteado en la 
-historia de usuario, identificando sus conceptos y relaciones antes de comenzar a programar.
+El contenido del paquete se determinará mediante el análisis del problema descrito en HU001. 
+A partir de esta historia se identificarán los distintos problemas y conceptos del dominio, 
+que se analizarán mediante issues antes de representarlos en código.
 
 ### Criterio de validación:
 
@@ -56,7 +57,7 @@ El producto se considerará válido cuando:
 - Se pueda comprobar el proceso de análisis y diseño seguido, relacionando las decisiones tomadas con los issues y commits correspondientes.
 - El código esté correctamente organizado y supere las comprobaciones de sintaxis o compilación correspondientes al lenguaje utilizado.
   
-Historias de usuario asociadas: HU001 y HU002.
+Historias de usuario asociadas: HU001.
 
 ## Milestone 1 - Primera versión con lógica de negocio
 ### Producto mínimamente viable:
@@ -78,4 +79,4 @@ El producto se considerará válido cuando:
 - Se hayan desarrollado y superado pruebas automatizadas que comprueben el comportamiento implementado
   frente a los casos derivados de la historia de usuario.
 
-Historias de usuario asociadas: HU001 y HU002.
+Historias de usuario asociadas: HU001.
