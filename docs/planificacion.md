@@ -40,43 +40,33 @@ con niveles elevados de contaminación existiendo otras alternativas más favora
 
 # Milestones
 
-## Milestone 0 - Primera versión interna del proyecto
-### Producto mínimamente viable:
+## Milestone 0 - Modelado del problema.
+### Objetivo
 
-Una primera versión de una biblioteca de código organizada en un paquete 
-que pueda ser utilizado por otros módulos del proyecto.
-
-El contenido del paquete se determinará mediante el análisis del problema descrito en HU001. 
-A partir de esta historia se identificarán los distintos problemas y conceptos del dominio, 
-que se analizarán mediante issues antes de representarlos en código.
+Darle forma a los conceptos del dominio necesarios para la HU001, relacionada con la predicción de la calidad del aire para practicar deporte a una hora determinada, siguiendo la metodología DDD. En esta fase se representarán estos conceptos en código, sin implementar todavía la lógica de negocio.
 
 ### Criterio de validación:
 
 El producto se considerará válido cuando:
-- El código desarrollado esté justificado por el análisis del problema descrito en HU001.
-- Se pueda comprobar el proceso de análisis y diseño seguido, relacionando las decisiones tomadas con los issues y commits correspondientes.
-- El código esté correctamente organizado y supere las comprobaciones de sintaxis o compilación correspondientes al lenguaje utilizado.
+- Los problemas de modelado se hayan identificado a partir de HU001 y analizado mediante issues.
+- Las entidades, objetos valor y sus relaciones estén justificadas mediante el análisis del dominio.
+- El código represente el modelo obtenido mediante DDD, siguiendo las buenas prácticas del lenguaje elegido.
+- El modelo permita representar un caso real de contaminación horaria y sirva como base para desarrollar posteriormente la lógica de negocio.
   
 Historias de usuario asociadas: HU001.
 
 ## Milestone 1 - Primera versión con lógica de negocio
-### Producto mínimamente viable:
+### Objetivo
 
-Una nueva versión de la biblioteca desarrollada en el Milestone 0, empaquetada 
-de forma que pueda ser utilizada por otros componentes del proyecto.
-
-Esta versión incorporará la lógica de negocio necesaria para avanzar en la resolución del problema 
-descrito en HU001. Su contenido se determinará a partir del análisis del problema y 
-de los resultados obtenidos en el milestone anterior.
+Utilizar el modelo desarrollado en el Milestone 0 para implementar la lógica de negocio que permita predecir 
+las condiciones de contaminación para una hora concreta y determinar si son favorables para practicar deporte, abordando HU001.
 
 ### Criterio de validación:
 
 El producto se considerará válido cuando:
-- La lógica de negocio implementada esté justificada por los problemas descritos en HU001
-  y los issues derivados de ella.
-- Se pueda comprobar el proceso de desarrollo seguido mediante los issues y commits correspondientes.
-- La biblioteca pueda utilizarse desde otros módulos del proyecto.
-- Se hayan desarrollado y superado pruebas automatizadas que comprueben el comportamiento implementado
-  frente a los casos derivados de la historia de usuario.
+- La lógica implementada permita resolver el problema planteado en HU001 utilizando el modelo desarrollado anteriormente.
+- Se hayan desarrollado pruebas automatizadas que comprueben el comportamiento esperado ante diferentes condiciones
+  de contaminación, incluyendo casos con datos insuficientes.
+- Las pruebas automatizadas se ejecuten correctamente y permitan comprobar que la lógica de negocio funciona según los requisitos establecidos.
 
 Historias de usuario asociadas: HU001.
