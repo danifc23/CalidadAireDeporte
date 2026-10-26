@@ -51,12 +51,10 @@ En este milestone se trabajará únicamente en la modelización del problema, si
 ### Criterio de validación:
 
 El producto se considerará válido cuando:
-- La modelización del problema descrito en HU001 se haya realizado siguiendo DDD,
-  razonando mediante issues las decisiones tomadas durante el análisis del dominio antes de representarlas en código.
-- Las entidades, objetos valor y sus relaciones estén justificadas mediante el análisis del dominio.
-- El código represente el modelo obtenido mediante DDD, siguiendo las buenas prácticas del lenguaje elegido.
-- El modelo permita representar un caso real de contaminación horaria y sirva como base para desarrollar posteriormente la lógica de negocio.
-  
+- Se haya seguido correctamente la metodología DDD para modelar el problema descrito en HU001, analizando el dominio mediante issues antes de escribir código.
+- La persona encargada de revisar el trabajo compruebe que el análisis realizado en los issues es adecuado al problema, que las decisiones de modelización
+  están justificadas y que el código obtenido es coherente con ellas y suficiente para continuar el desarrollo.
+
 Historias de usuario asociadas: HU001.
 
 ## Milestone 1 - Primera versión con lógica de negocio
