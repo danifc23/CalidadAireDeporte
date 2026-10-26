@@ -41,7 +41,7 @@ con niveles elevados de contaminación existiendo otras alternativas más favora
 # Milestones
 
 ## Milestone 0 - Modelado del problema.
-### Objetivo
+### Producto mínimamente viable
 
 El contenido del paquete se determinará a partir del análisis del problema descrito en HU001.
 A partir de esta historia de usuario se estudiarán los conceptos y las relaciones del dominio mediante issues, 
@@ -59,7 +59,7 @@ El producto se considerará válido cuando:
 Historias de usuario asociadas: HU001.
 
 ## Milestone 1 - Primera versión con lógica de negocio
-### Objetivo
+### Producto mínimamente viable
 
 Utilizar el modelo desarrollado en el Milestone 0 para implementar la lógica de negocio que permita predecir 
 las condiciones de contaminación para una hora concreta y determinar si son favorables para practicar deporte, abordando HU001.
