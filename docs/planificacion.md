@@ -43,7 +43,10 @@ con niveles elevados de contaminación existiendo otras alternativas más favora
 ## Milestone 0 - Modelado del problema.
 ### Objetivo
 
-Darle forma a los conceptos del dominio necesarios para la HU001, relacionada con la predicción de la calidad del aire para practicar deporte a una hora determinada, siguiendo la metodología DDD. En esta fase se representarán estos conceptos en código, sin implementar todavía la lógica de negocio.
+El contenido del paquete se determinará a partir del análisis del problema descrito en HU001.
+A partir de esta historia de usuario se estudiarán los conceptos y las relaciones del dominio mediante issues, 
+justificando las decisiones tomadas antes de representarlas en código.
+En este milestone se trabajará únicamente en la modelización del problema, sin implementar todavía la lógica de negocio.
 
 ### Criterio de validación:
 
