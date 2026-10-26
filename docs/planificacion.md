@@ -57,7 +57,7 @@ El producto se considerará válido cuando:
 
 Historias de usuario asociadas: HU001.
 
-## Milestone 1 - Primera versión con lógica de negocio
+## Milestone 1 - Incorporación de lógica de negocio
 ### Producto mínimamente viable
 
 Utilizar el modelo desarrollado en el Milestone 0 para implementar la lógica de negocio que permita predecir 
